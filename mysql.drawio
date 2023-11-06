@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-05T11:51:23.045Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="nCTWO4CTtGHBpgkIubBJ" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-06T00:48:42.018Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="RkA4F07foClhGaQ1J7zs" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
-    <mxGraphModel dx="2284" dy="3041" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1900" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -649,7 +649,7 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-221" value="&lt;b&gt;File Trailer(8B)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="60" y="-1350" width="250" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-222" value="&lt;b&gt;user record&lt;br&gt;(uncertain)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-222" value="&lt;b&gt;user record&lt;br&gt;(uncertain)&lt;br&gt;实际存储的行记录内容&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="60" y="-1530" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-225" value="根据不同目的，页有不同的类型&lt;br&gt;*存放表空间头部信息的页&lt;br&gt;*存放Insert Buffer信息的页&lt;br&gt;*存放INODE信息的页&lt;br&gt;*存放undo日志信息的页&lt;br&gt;..." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
@@ -661,11 +661,20 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-228" value="&lt;b&gt;Infimum+supremum(26B)&lt;br&gt;两个虚拟的行记录&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="60" y="-1570" width="250" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-229" value="&lt;b&gt;free space&lt;br&gt;(uncertain)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-229" value="&lt;b&gt;free space&lt;br&gt;(uncertain)&lt;br&gt;页中尚未使用的空间&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="60" y="-1470" width="250" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-230" value="&lt;b&gt;page directory&lt;br&gt;(uncertain)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-230" value="&lt;b&gt;page directory&lt;/b&gt;&lt;br&gt;&lt;b&gt;(uncertain)&lt;/b&gt;&lt;br&gt;&lt;b&gt;页中的某些记录的相对位置&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="60" y="-1410" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-232" value="记录会按照指定的行格式存储到User Records部分" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-211.5" y="-1515" width="271.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-233" value="当Free Space部分的空间全部被User Records部分替代掉之后，也就意味着这个页使用完了" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="-1450" width="271.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-234" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;mysql&amp;gt; CREATE TABLE page_demo(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c1 INT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c2 INT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c3 VARCHAR(10000),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;PRIMARY KEY (c1)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt; ) CHARSET=ascii ROW_FORMAT=Compact;&lt;/div&gt;&lt;div&gt;mysql&amp;gt; INSERT INTO page_demo VALUES(1, 100, &#39;aaaa&#39;), (2, 200, &#39;bbbb&#39;), (3, 300, &#39;cccc&#39;), (4, 400, &#39;dddd&#39;);&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="-1720" width="270" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
