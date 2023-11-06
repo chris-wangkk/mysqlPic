@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-06T10:31:30.006Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="GZaJl_Crs7ByrKSuIHQE" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-06T11:28:32.586Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ISzWrodPyvf-rTq8sDX5" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="1900" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -674,7 +674,7 @@
           <mxGeometry x="-220" y="-1450" width="271.5" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-234" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;mysql&amp;gt; CREATE TABLE page_demo(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c1 INT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c2 INT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c3 VARCHAR(10000),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;PRIMARY KEY (c1)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt; ) CHARSET=ascii ROW_FORMAT=Compact;&lt;/div&gt;&lt;div&gt;mysql&amp;gt; INSERT INTO page_demo VALUES(1, 100, &#39;aaaa&#39;), (2, 200, &#39;bbbb&#39;), (3, 300, &#39;cccc&#39;), (4, 400, &#39;dddd&#39;);&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="-440" y="-1720" width="270" height="160" as="geometry" />
+          <mxGeometry x="-440" y="-1793" width="270" height="160" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-251" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-235" target="QwdAHC_jwGnzuMrW2I-O-243">
           <mxGeometry relative="1" as="geometry" />
@@ -685,22 +685,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-235" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="850" y="-1660" width="120" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-236" value="&lt;b&gt;transaction_id&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="530" y="-1970" width="98" height="40" as="geometry" />
+          <mxGeometry x="-740" y="-1530" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-237" value="&lt;b&gt;infimum（8B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="970" y="-1660" width="100" height="20" as="geometry" />
+          <mxGeometry x="-620" y="-1530" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-238" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1124" y="-1660" width="120" height="20" as="geometry" />
+          <mxGeometry x="-466" y="-1530" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-239" value="&lt;b&gt;supremum（8B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="1244" y="-1660" width="100" height="20" as="geometry" />
+          <mxGeometry x="-346" y="-1530" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-242" value="heap_no分别对应0和1&lt;br&gt;record_type分别对应2和3" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
-          <mxGeometry x="322" y="-1560" width="140" height="20" as="geometry" />
+          <mxGeometry x="-110" y="-1560" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-252" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-243" target="QwdAHC_jwGnzuMrW2I-O-245">
           <mxGeometry relative="1" as="geometry" />
@@ -711,10 +708,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-243" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="850" y="-1585" width="120" height="20" as="geometry" />
+          <mxGeometry x="-740" y="-1455" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-244" value="c1=1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="970" y="-1585" width="100" height="20" as="geometry" />
+          <mxGeometry x="-620" y="-1455" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-253" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-245" target="QwdAHC_jwGnzuMrW2I-O-247">
           <mxGeometry relative="1" as="geometry" />
@@ -725,10 +722,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-245" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="850" y="-1520" width="120" height="20" as="geometry" />
+          <mxGeometry x="-740" y="-1390" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-246" value="c1=2" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="970" y="-1520" width="100" height="20" as="geometry" />
+          <mxGeometry x="-620" y="-1390" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-254" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-247" target="QwdAHC_jwGnzuMrW2I-O-249">
           <mxGeometry relative="1" as="geometry" />
@@ -739,10 +736,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-247" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="850" y="-1460" width="120" height="20" as="geometry" />
+          <mxGeometry x="-740" y="-1330" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-248" value="c1=3" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="970" y="-1460" width="100" height="20" as="geometry" />
+          <mxGeometry x="-620" y="-1330" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-255" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-249" target="QwdAHC_jwGnzuMrW2I-O-238">
           <mxGeometry relative="1" as="geometry" />
@@ -753,13 +750,31 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-249" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="850" y="-1400" width="120" height="20" as="geometry" />
+          <mxGeometry x="-740" y="-1270" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-250" value="c1=4" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="970" y="-1400" width="100" height="20" as="geometry" />
+          <mxGeometry x="-620" y="-1270" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-265" value="对页中的记录进行增删改操作，InnoDB始终会维护一条记录的单链表，保证链表中的各个节点是按照主键值由小到大的顺序连接起来的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="926" y="-1740" width="300" height="60" as="geometry" />
+          <mxGeometry x="-664" y="-1610" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-266" value="页的一些通用信息" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="322" y="-1640" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-267" value="FIL_PAGE_SPACE_OR_CHKSUM(4B)&lt;br&gt;页的校验和" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="466" y="-1705" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-268" value="FIL_PAGE_OFFSET(4B)&lt;br&gt;页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="466" y="-1665" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-269" value="FIL_PAGE_PREV(4B)&lt;br&gt;上一个页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="466" y="-1625" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-270" value="FIL_PAGE_NEXT(4B)&lt;br&gt;下一个页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="466" y="-1585" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-271" value="FIL_PAGE_NEXT(4B)&lt;br&gt;下一个页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="466" y="-1545" width="250" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
