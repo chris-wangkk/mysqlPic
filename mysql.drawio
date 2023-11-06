@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-06T11:28:32.586Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ISzWrodPyvf-rTq8sDX5" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-06T11:29:25.569Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="IoFK2D7qZQsTLrUJMiCo" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="1900" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -775,6 +775,9 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-271" value="FIL_PAGE_NEXT(4B)&lt;br&gt;下一个页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="466" y="-1545" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-272" value="FIL_PAGE_LSN(8B)&lt;br&gt;页面被最后修改时对应的LSN" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="466" y="-1505" width="250" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
