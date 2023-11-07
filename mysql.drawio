@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-11-07T02:14:10.740Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="HOPPZlbRp8QeqRqviN_A" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-07T02:25:17.893Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="w-3fBTge73AKB8Q0mSGz" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="1900" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-296" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="-1550" width="300" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=2;opacity=50;" vertex="1" parent="1">
           <mxGeometry x="-520" y="290" width="1522" height="700" as="geometry" />
         </mxCell>
@@ -616,8 +619,8 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-208" value="B+树每层非叶子节点种最小记录会设置" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="512" y="-1860" width="228" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-209" value="当前记录拥有的记录数" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
-          <mxGeometry x="512" y="-1840" width="130" height="20" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-209" value="每个组的当前记录组拥有的记录数（作为该组最后一条记录）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="512" y="-1840" width="338" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-210" value="单独放在一个称为当前记录再记录堆的位置（从2开始，0和1对应系统定义的伪记录：最小记录和最大记录，单独放在Infimum + Supremum部分）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="512" y="-1820" width="798" height="20" as="geometry" />
@@ -837,6 +840,9 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-295" value="页的校验和(4B，与File Header里的一致，用于确认刷盘是否全部成功)&lt;br&gt;页面被最后修改时对应的日志序列位置LSN(4B)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="322" y="-1340" width="418" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-297" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="-1470" width="300" height="310" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
