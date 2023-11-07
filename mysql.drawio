@@ -1,11 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2023-11-07T02:25:17.893Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="w-3fBTge73AKB8Q0mSGz" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-07T02:34:25.882Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="s6AB45CtEMn5c_DLbBKR" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="1900" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-296" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="-670" y="-1550" width="300" height="60" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-296" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=60;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-820" y="-1540" width="90" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-299" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="-1540" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-297" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="-1470" width="310" height="310" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeWidth=2;opacity=50;" vertex="1" parent="1">
           <mxGeometry x="-520" y="290" width="1522" height="700" as="geometry" />
@@ -841,8 +847,32 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-295" value="页的校验和(4B，与File Header里的一致，用于确认刷盘是否全部成功)&lt;br&gt;页面被最后修改时对应的日志序列位置LSN(4B)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="322" y="-1340" width="418" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-297" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="-670" y="-1470" width="300" height="310" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-298" value="为加快查询速度，将所有正常的记录（包括最大和最小记录，不包括标记为已删除的记录）划分为几个组；每个组的最后一条记录（组内最大的记录）的头信息中的n_owned属性记录该记录拥有多少条记录（组内记录数）；将这条记录的地址偏移量（槽slot）单独提取出来按顺序存储到此处（由槽组成）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="-1410" width="331.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-300" value="&lt;b&gt;page directory&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-820" y="-1570" width="95.75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-302" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#B20000;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-301" target="QwdAHC_jwGnzuMrW2I-O-235">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-301" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-790" y="-1520" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-304" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#B20000;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-303" target="QwdAHC_jwGnzuMrW2I-O-238">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-690" y="-1465" />
+              <mxPoint x="-690" y="-1140" />
+              <mxPoint x="-500" y="-1140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-303" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-790" y="-1475" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-305" value="分组约束：&lt;br&gt;对于最小记录所在的分组只能有&amp;nbsp;1&amp;nbsp;条记录，最大记录所在的分组拥有的记录条数只能在&amp;nbsp;1~8&amp;nbsp;条之间，剩下的分组中记录的条数范围只能在是&amp;nbsp;4~8&amp;nbsp;条之间" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-350" y="-1200" width="300" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
