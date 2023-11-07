@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-07T02:34:25.882Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="s6AB45CtEMn5c_DLbBKR" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-07T02:38:20.512Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="8ZTWQiaYr9cQlLQhYw6g" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
-    <mxGraphModel dx="1900" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2750" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -873,6 +873,12 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-305" value="分组约束：&lt;br&gt;对于最小记录所在的分组只能有&amp;nbsp;1&amp;nbsp;条记录，最大记录所在的分组拥有的记录条数只能在&amp;nbsp;1~8&amp;nbsp;条之间，剩下的分组中记录的条数范围只能在是&amp;nbsp;4~8&amp;nbsp;条之间" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-350" y="-1200" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-306" value="各个槽代表的记录的主键值都是从小到大排序的，所以可以使用所谓的二分法来进行快速查找" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1040" y="-1530" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-307" value="在一个数据页中查找指定主键值的记录的过程分为两步：&lt;br&gt;1.通过二分法确定该记录所在的槽，并找到该槽中主键值最小的那条记录&lt;br&gt;2.通过记录的next_record属性遍历该槽所在的组中的各个记录" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="-870" y="-1680" width="390" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
