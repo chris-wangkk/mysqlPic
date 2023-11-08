@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T01:58:30.653Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="4kfaU0QXuRL7csIIKejP" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-08T02:06:54.594Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="16r3W0_3PvDNXNo89xS5" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="2750" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -930,6 +930,9 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-322" value="PAGE_BTR_SEG_LEAF(10B)&lt;br&gt;B+树叶子段的头部信息，仅在B+树的Root页定义" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-547" y="-1500" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-325" value="若新插入的一条记录的主键值比上一条记录的主键值大,则这条记录的插入方向是右边(反之则是左边).用PAGE_DIRECTION来表示最后一条记录插入方向的状态;连续几次插入新记录的方向都是一致的,InnoDB会把沿着同一个方向插入记录的条数记下来(PAGE_N_DIRECTION),若改变,则这个状态的值会被清零重新统计" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-830" y="-1800" width="281" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
