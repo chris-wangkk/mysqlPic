@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T02:06:54.594Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="16r3W0_3PvDNXNo89xS5" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-08T02:08:07.117Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="DLON90glLYqsp-H_DSTS" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="2750" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -785,7 +785,7 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-272" value="FIL_PAGE_LSN(8B)&lt;br&gt;页面被最后修改时对应的LSN" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="572" y="-1580" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-273" value="FIL_PAGE_TYPE(2B)&lt;br&gt;页的类型" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-273" value="FIL_PAGE_TYPE(2B)&lt;br&gt;页的类型" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontColor=#FF0000;" vertex="1" parent="1">
           <mxGeometry x="572" y="-1540" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-274" value="FIL_PAGE_FILE_FLUSH_LSN(8B)&lt;br&gt;文件至少被刷新到了对应的LSN值" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
@@ -814,7 +814,7 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-294" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-283">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1220" y="-1620" as="targetPoint" />
+            <mxPoint x="1360" y="-1620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-283" value="构成双向链表（如所有的数据页其实是一个双链表）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
@@ -824,25 +824,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-284" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="1225.5" y="-1650" width="100" height="30" as="geometry" />
+          <mxGeometry x="1369.5" y="-1650" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-285" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1225.5" y="-1620" width="100" height="40" as="geometry" />
+          <mxGeometry x="1369.5" y="-1620" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-293" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-287" target="QwdAHC_jwGnzuMrW2I-O-289">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-287" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="1364.5" y="-1650" width="100" height="30" as="geometry" />
+          <mxGeometry x="1508.5" y="-1650" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-288" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1364.5" y="-1620" width="100" height="40" as="geometry" />
+          <mxGeometry x="1508.5" y="-1620" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-289" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="1504.5" y="-1650" width="100" height="30" as="geometry" />
+          <mxGeometry x="1648.5" y="-1650" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-290" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1504.5" y="-1620" width="100" height="40" as="geometry" />
+          <mxGeometry x="1648.5" y="-1620" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-295" value="页的校验和(4B，与File Header里的一致，用于确认刷盘是否全部成功)&lt;br&gt;页面被最后修改时对应的日志序列位置LSN(4B)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="322" y="-1340" width="418" height="40" as="geometry" />
