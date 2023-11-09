@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-09T03:46:31.415Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="hO2RpwgrfpRFuEW-eK80" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-09T03:54:27.804Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="wqv8gMRZUbrTt6hxQVFh" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="2750" dy="3925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -952,8 +952,8 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-325" value="若新插入的一条记录的主键值比上一条记录的主键值大,则这条记录的插入方向是右边(反之则是左边).用PAGE_DIRECTION来表示最后一条记录插入方向的状态;连续几次插入新记录的方向都是一致的,InnoDB会把沿着同一个方向插入记录的条数记下来(PAGE_N_DIRECTION),若改变,则这个状态的值会被清零重新统计" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="-830" y="-1800" width="281" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-326" value="查找记录过程：&lt;br&gt;1.定位到记录所在的页（从目录项中根据二分法快速确定出记录所在页）&lt;br&gt;2.从所在的页内中查找相应的记录" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="-2060" width="280" height="66" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-326" value="查找记录过程：&lt;br&gt;1.定位到记录所在的页（基于页目录(Page Directory)，根据二分法快速定位到对应目录项，从而确定出记录所在页）&lt;br&gt;2.从所在的页内中查找相应的记录" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="-2060" width="360" height="70" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-329" value="&lt;b&gt;user record&lt;/b&gt;" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-549.9999999999999" y="-1366" width="95.75" height="30" as="geometry" />
