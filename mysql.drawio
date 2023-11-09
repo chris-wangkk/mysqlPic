@@ -1,14 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T02:08:07.117Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="DLON90glLYqsp-H_DSTS" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-09T03:37:30.031Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="XNqO5QIULmYizVi-psE1" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
-    <mxGraphModel dx="2750" dy="2825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2750" dy="3925" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-328" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=60;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="-930" y="-1470" width="380" height="240" as="geometry" />
+        </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-296" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=60;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="-1039" y="-1540" width="90" height="380" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-299" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="-889" y="-1540" width="310" height="60" as="geometry" />
+          <mxGeometry x="-889" y="-1563" width="310" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-297" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="-889" y="-1470" width="310" height="310" as="geometry" />
@@ -584,7 +587,7 @@
           <mxGeometry x="36.5" y="-1870" width="165.5" height="50" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-191" value="&lt;font style=&quot;font-size: 10px;&quot; face=&quot;Comic Sans MS&quot;&gt;mysql&amp;gt; CREATE TABLE record_format_demo (&lt;br&gt;    -&amp;gt;     c1 VARCHAR(10),&lt;br&gt;    -&amp;gt;     c2 VARCHAR(10) NOT NULL,&lt;br&gt;    -&amp;gt;     c3 CHAR(10),&lt;br&gt;    -&amp;gt;     c4 VARCHAR(10)&lt;br&gt;    -&amp;gt; ) CHARSET=ascii ROW_FORMAT=COMPACT;&lt;br&gt;...&lt;br&gt;&lt;span style=&quot;background-color: rgb(248, 248, 248);&quot;&gt;mysql&amp;gt; SELECT * FROM record_format_demo;&lt;br&gt;+------+-----+------+------+&lt;br&gt;| c1   | c2  | c3   | c4   |&lt;br&gt;+------+-----+------+------+&lt;br&gt;| aaaa | bbb | cc   | d    |&lt;br&gt;+------+-----+------+------+&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="-335" y="-2190" width="270" height="220" as="geometry" />
+          <mxGeometry x="-205" y="-2410" width="270" height="220" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-192" value="&lt;b&gt;01 03 04&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="82" y="-1920" width="120" height="40" as="geometry" />
@@ -676,6 +679,11 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-230" value="&lt;b&gt;page directory&lt;/b&gt;&lt;br&gt;&lt;b&gt;(uncertain)&lt;/b&gt;&lt;br&gt;&lt;b&gt;页中的某些记录的相对位置&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="60" y="-1410" width="250" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-330" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-232" target="QwdAHC_jwGnzuMrW2I-O-329">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-550" y="-1500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-232" value="记录会按照指定的行格式存储到User Records部分" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="-211.5" y="-1515" width="271.5" height="30" as="geometry" />
         </mxCell>
@@ -693,13 +701,13 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-235" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-839" y="-1530" width="120" height="20" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-235" value="&lt;b&gt;记录头信息（2）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-839" y="-1553" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-237" value="&lt;b&gt;infimum（8B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="-719" y="-1530" width="100" height="20" as="geometry" />
+          <mxGeometry x="-719" y="-1553" width="100" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-238" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-238" value="&lt;b&gt;记录头信息（3）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-839" y="-1200" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-239" value="&lt;b&gt;supremum（8B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -716,7 +724,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-243" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-243" value="&lt;b&gt;记录头信息（0）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-839" y="-1455" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-244" value="c1=1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -730,7 +738,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-245" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-245" value="&lt;b&gt;记录头信息（0）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-839" y="-1390" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-246" value="c1=2" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -744,7 +752,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-247" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-247" value="&lt;b&gt;记录头信息（0）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-839" y="-1330" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-248" value="c1=3" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -758,14 +766,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-249" value="&lt;b&gt;记录头信息（5B）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-249" value="&lt;b&gt;记录头信息（0）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-839" y="-1270" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-250" value="c1=4" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="-719" y="-1270" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-265" value="对页中的记录进行增删改操作，InnoDB始终会维护一条记录的单链表，保证链表中的各个节点是按照主键值由小到大的顺序连接起来的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-915" y="-1610" width="300" height="60" as="geometry" />
+          <mxGeometry x="-900" y="-1645" width="300" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-266" value="页的一些通用信息" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF0000;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="322" y="-1640" width="140" height="20" as="geometry" />
@@ -814,7 +822,7 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-294" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-283">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1360" y="-1620" as="targetPoint" />
+            <mxPoint x="1660" y="-1620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-283" value="构成双向链表（如所有的数据页其实是一个双链表）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
@@ -824,25 +832,25 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-284" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="1369.5" y="-1650" width="100" height="30" as="geometry" />
+          <mxGeometry x="1785.5" y="-1650" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-285" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1369.5" y="-1620" width="100" height="40" as="geometry" />
+          <mxGeometry x="1785.5" y="-1620" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-293" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-287" target="QwdAHC_jwGnzuMrW2I-O-289">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-287" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="1508.5" y="-1650" width="100" height="30" as="geometry" />
+          <mxGeometry x="1960" y="-1650" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-288" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1508.5" y="-1620" width="100" height="40" as="geometry" />
+          <mxGeometry x="1960" y="-1620" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-289" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="1648.5" y="-1650" width="100" height="30" as="geometry" />
+          <mxGeometry x="2140" y="-1650" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-290" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1648.5" y="-1620" width="100" height="40" as="geometry" />
+          <mxGeometry x="2140" y="-1620" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-295" value="页的校验和(4B，与File Header里的一致，用于确认刷盘是否全部成功)&lt;br&gt;页面被最后修改时对应的日志序列位置LSN(4B)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="322" y="-1340" width="418" height="40" as="geometry" />
@@ -850,7 +858,7 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-298" value="为加快查询速度，将所有正常的记录（包括最大和最小记录，不包括标记为已删除的记录）划分为几个组；每个组的最后一条记录（组内最大的记录）的头信息中的n_owned属性记录该记录拥有多少条记录（组内记录数）；将这条记录的地址偏移量（槽slot）单独提取出来按顺序存储到此处（由槽组成）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="-280" y="-1410" width="331.5" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-300" value="&lt;b&gt;page directory&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-300" value="&lt;b&gt;page directory&lt;/b&gt;" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-1039" y="-1570" width="95.75" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-302" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#B20000;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-301" target="QwdAHC_jwGnzuMrW2I-O-235">
@@ -877,8 +885,8 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-306" value="各个槽代表的记录的主键值都是从小到大排序的，所以可以使用所谓的二分法来进行快速查找" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1259" y="-1530" width="210" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-307" value="在一个数据页中查找指定主键值的记录的过程分为两步：&lt;br&gt;1.通过二分法确定该记录所在的槽，并找到该槽中主键值最小的那条记录&lt;br&gt;2.通过记录的next_record属性遍历该槽所在的组中的各个记录" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
-          <mxGeometry x="-1089" y="-1680" width="390" height="55" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-307" value="在一个数据页中查找指定主键值的记录的过程分为两步：&lt;br&gt;1.通过二分法确定该记录所在的槽，并找到该槽中主键值最小的那条记录&lt;br&gt;2.通过记录的next_record属性遍历该槽所在的组中的各个记录（每个数据页中的记录会按照主键值从小到大的顺序组成一个单向链表）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="-1460" y="-1645" width="471" height="65" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-323" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-308" target="QwdAHC_jwGnzuMrW2I-O-309">
           <mxGeometry relative="1" as="geometry" />
@@ -890,49 +898,104 @@
           <mxGeometry x="-158.5" y="-1605" width="210" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-309" value="PAGE_N_DIR_SLOTS(2B)&lt;br&gt;页目录中的槽数量" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1980" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2166" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-310" value="PAGE_HEAP_TOP(2B)&lt;br&gt;还未使用的空间最小地址(即free space)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1940" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2126" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-311" value="PAGE_MAX_TRX_ID(8B)&lt;br&gt;修改当前页的最大事务ID（仅二级索引中定义）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1620" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1806" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-312" value="PAGE_N_HEAP(2B)&lt;br&gt;页中记录数（含最小/最大/标记为删除的记录）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1900" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2086" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-313" value="PAGE_FREE(2B)&lt;br&gt;1st标记为删除的记录地址（形成链表，可复用）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1860" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2046" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-314" value="PAGE_GARBAGE(2B)&lt;br&gt;已删除记录占用的字节数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1820" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2006" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-315" value="PAGE_LAST_INSERT(2B)&lt;br&gt;最后插入记录的位置" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1780" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1966" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-316" value="PAGE_DIRECTION(2B)&lt;br&gt;记录插入的方向" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1740" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1926" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-317" value="PAGE_N_DIRECTION(2B)&lt;br&gt;一个方向连续插入的记录数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1700" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1886" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-318" value="PAGE_N_RECS(2B)&lt;br&gt;页中记录数（不含最小/最大/标记为删除的记录）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1660" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1846" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-319" value="PAGE_BTR_SEG_TOP(10B)&lt;br&gt;B+树非叶子段的头部信息，仅在B+树的Root页定义" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1460" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1646" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-320" value="PAGE_LEVEL(2B)&lt;br&gt;页在B+树中所处的层级" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1580" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1766" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-321" value="PAGE_INDEX_ID(8B)&lt;br&gt;索引ID，表示当前页属于哪个索引" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1540" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1726" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-322" value="PAGE_BTR_SEG_LEAF(10B)&lt;br&gt;B+树叶子段的头部信息，仅在B+树的Root页定义" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1500" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1686" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-325" value="若新插入的一条记录的主键值比上一条记录的主键值大,则这条记录的插入方向是右边(反之则是左边).用PAGE_DIRECTION来表示最后一条记录插入方向的状态;连续几次插入新记录的方向都是一致的,InnoDB会把沿着同一个方向插入记录的条数记下来(PAGE_N_DIRECTION),若改变,则这个状态的值会被清零重新统计" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="-830" y="-1800" width="281" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-326" value="查找记录过程：&lt;br&gt;1.定位到记录所在的页（从目录项中根据二分法快速确定出记录所在页）&lt;br&gt;2.从所在的页内中查找相应的记录" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="-2060" width="280" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-329" value="&lt;b&gt;user record&lt;/b&gt;" style="text;html=1;strokeColor=#006EAF;fillColor=#1ba1e2;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="-549.9999999999999" y="-1366" width="95.75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-331" value="对页中的记录进行增删改操作，InnoDB始终会维护一条数据页的双向链表，保证链表中下一个数据页中用户记录的主键值必须大于上一个页中用户记录的主键值" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="-1570" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-332" value="数据页在物理上不是连续的，因此需要建立目录（即索引），每个页对应一个目录项，可根据主键值快速定位某些记录所在的页&lt;br&gt;目录项记录中包含主键和页号,复用了存储用户记录的数据页来存储目录项." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1361" y="-1840" width="299" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-333" value="key&lt;br&gt;页中用户记录最小的主键值" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="-1820" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-334" value="key&lt;br&gt;页中用户记录最小的主键值" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="-1820" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-339" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-335" target="QwdAHC_jwGnzuMrW2I-O-284">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-335" value="page_no&lt;br&gt;页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="-1780" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-336" value="目录项" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="-1850" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-340" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-343" target="QwdAHC_jwGnzuMrW2I-O-287">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1965" y="-1770" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-341" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-345" target="QwdAHC_jwGnzuMrW2I-O-289">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2085" y="-1768" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-342" value="&lt;b&gt;记录头信息（1）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1890" y="-1800" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-343" value="&lt;b&gt;目录项&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2010" y="-1800" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-344" value="&lt;b&gt;记录头信息（1）&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="2140" y="-1800" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-345" value="&lt;b&gt;目录项&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="-1800" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-346" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1680" y="-1890" width="690" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-347" value="" style="rounded=0;whiteSpace=wrap;html=1;textOpacity=0;opacity=30;dashed=1;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1680" y="-1860" width="690" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
