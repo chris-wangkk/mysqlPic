@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-12T10:37:33.900Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="T3nbtvR6h-GfVhTcKlXI" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-12T11:11:18.290Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="sr_T1Clovga879KqrZ8t" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1551,6 +1551,30 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-547" value="7.SYS（Data Dictionary Header）&lt;br&gt;数据字典头部信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
           <mxGeometry x="1540" y="-2977" width="280" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-550" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;向一个表中插入一条记录时,MySQL先要校验一下插入语句对应的表存不存在,插入的列和表中的列是否符合(语法校验),还需要知道该表的聚簇索引和所有二级索引对应的根页是哪个表空间的哪个页,以便把记录插入到对应索引的B+树中.故MySQL除了维护着要插入的用户数据之外,还有许多额外的信息(如某个表属于哪个表空间/表里边有多少列/表对应的每一个列的类型是什么...),这些叫做元数据.&lt;/div&gt;&lt;div&gt;InnoDB存储引擎使用内部系统表(也称为数据字典)来记录这些元数据(以B+树的形式保存在系统表空间的某些页):&lt;/div&gt;&lt;div&gt;1.SYS_TABLES&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;整个InnoDB存储引擎中所有的表的信息&lt;/div&gt;&lt;div&gt;2.SYS_COLUMNS&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的列的信息&lt;/div&gt;&lt;div&gt;3.SYS_INDEXES&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的索引的信息&lt;/div&gt;&lt;div&gt;4.SYS_FIELDS&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的索引对应的列的信息&lt;/div&gt;&lt;div&gt;5.SYS_FOREIGN&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的外键的信息&lt;/div&gt;&lt;div&gt;6.SYS_FOREIGN_COLS&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的外键对应列的信息&lt;/div&gt;&lt;div&gt;7.SYS_TABLESPACES&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的表空间信息&lt;/div&gt;&lt;div&gt;8.SYS_DATAFILES&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的表空间对应文件系统的文件路径信息&lt;/div&gt;&lt;div&gt;9.SYS_VIRTUAL&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;整个InnoDB存储引擎中所有的虚拟生成列的信息&lt;/div&gt;&lt;div&gt;而上述表的元数据则固定写入到页号=7(类型=SYS)中&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#0000CC;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1697.38" y="-3660" width="785.25" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-551" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="990" y="-3315" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-552" value="Data Dictionary Header(56B)&lt;br&gt;数据字典头部信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="990" y="-3285" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-553" value="&lt;b&gt;File Trailer&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="990" y="-3144" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-554" value="Unused" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="990" y="-3245" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-556" value="Segment Header(10B)&lt;br&gt;段头部信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="990" y="-3215" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-557" value="Empty Space" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="990" y="-3184" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-558" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;Data Dictionary Header类型页&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="-3345" width="210" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
