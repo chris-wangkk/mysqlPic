@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-12T11:11:18.290Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="sr_T1Clovga879KqrZ8t" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-12T11:12:02.078Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="xn2zlSQMOu8rgFUzO1Rv" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1556,25 +1556,25 @@
           <mxGeometry x="1697.38" y="-3660" width="785.25" height="250" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-551" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="990" y="-3315" width="300" height="30" as="geometry" />
+          <mxGeometry x="1361" y="-3535.5" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-552" value="Data Dictionary Header(56B)&lt;br&gt;数据字典头部信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="990" y="-3285" width="300" height="40" as="geometry" />
+          <mxGeometry x="1361" y="-3505.5" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-553" value="&lt;b&gt;File Trailer&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="990" y="-3144" width="300" height="30" as="geometry" />
+          <mxGeometry x="1361" y="-3364.5" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-554" value="Unused" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="990" y="-3245" width="300" height="30" as="geometry" />
+          <mxGeometry x="1361" y="-3465.5" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-556" value="Segment Header(10B)&lt;br&gt;段头部信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="990" y="-3215" width="300" height="30" as="geometry" />
+          <mxGeometry x="1361" y="-3435.5" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-557" value="Empty Space" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="990" y="-3184" width="300" height="40" as="geometry" />
+          <mxGeometry x="1361" y="-3404.5" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-558" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;Data Dictionary Header类型页&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="1035" y="-3345" width="210" height="30" as="geometry" />
+          <mxGeometry x="1406" y="-3565.5" width="210" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
