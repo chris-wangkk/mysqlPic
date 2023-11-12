@@ -1,20 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-11-12T10:05:05.766Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="Uw62DHnvwi9rDwwkcFzY" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-12T10:17:16.811Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="4beppsWo47j-Vpcz5IjB" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-512" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;curved=1;fontColor=#999999;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-480" target="QwdAHC_jwGnzuMrW2I-O-492">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="5310" y="-3230" />
-              <mxPoint x="5310" y="-3066" />
-              <mxPoint x="5400" y="-3066" />
-              <mxPoint x="5400" y="-2901" />
-              <mxPoint x="5490" y="-2901" />
-              <mxPoint x="5490" y="-2870" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-512" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fontColor=#999999;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-480" target="QwdAHC_jwGnzuMrW2I-O-492">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-395" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;为避免随机IO,尽量让记录页链表中的页的物理位置也相邻(在进行范围查询时可使用顺序IO),引入区(extent)的概念(表中数据量大时分配单位按区进行)&lt;/div&gt;&lt;div&gt;在物理位置上连续64个页(1MB)组成一个区---&amp;gt;每256个区划为一个组（放不下足够多的XDES Entry结构）&lt;/div&gt;&lt;div&gt;组的前几个页是固定的,其中:&lt;/div&gt;&lt;div&gt;1.1st组(extent0)头3个页的类型是固定的&lt;/div&gt;&lt;div&gt;2.非1st组头2个页的类型是固定的&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;叶子节点和非叶子节点分别有不同的区：存放叶子节点的区的集合是一个段(segment，&lt;font color=&quot;#ff0000&quot;&gt;一个逻辑上的概念&lt;/font&gt;)，存放非叶子节点的区的集合是另一个段（一个索引会生成2个段：一个叶子节点段+一个非叶子节点段）&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#0000CC;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="2613" y="-3257" width="710" height="157" as="geometry" />
@@ -695,7 +686,7 @@
           <mxGeometry x="-98" y="-1810" width="268" height="110" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-227" value="存放表中记录的页（索引页）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
-          <mxGeometry x="130" y="-1700" width="120" height="30" as="geometry" />
+          <mxGeometry x="130" y="-1680" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-228" value="&lt;b&gt;Infimum+supremum(26B)&lt;br&gt;两个虚拟的行记录&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="60" y="-1570" width="250" height="40" as="geometry" />
@@ -718,7 +709,7 @@
           <mxGeometry x="-220" y="-1450" width="271.5" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-234" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;mysql&amp;gt; CREATE TABLE page_demo(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c1 INT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c2 INT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;c3 VARCHAR(10000),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;PRIMARY KEY (c1)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -&amp;gt; ) CHARSET=ascii ROW_FORMAT=Compact;&lt;/div&gt;&lt;div&gt;mysql&amp;gt; INSERT INTO page_demo VALUES(1, 100, &#39;aaaa&#39;), (2, 200, &#39;bbbb&#39;), (3, 300, &#39;cccc&#39;), (4, 400, &#39;dddd&#39;);&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="-1259" y="-1850" width="270" height="160" as="geometry" />
+          <mxGeometry x="-1660" y="-1885" width="270" height="160" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-251" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-235" target="QwdAHC_jwGnzuMrW2I-O-243">
           <mxGeometry relative="1" as="geometry" />
@@ -926,49 +917,55 @@
           <mxGeometry x="-158.5" y="-1605" width="210" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-309" value="PAGE_N_DIR_SLOTS(2B)&lt;br&gt;页目录中的槽数量" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-2166" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2248" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-310" value="PAGE_HEAP_TOP(2B)&lt;br&gt;还未使用的空间最小地址(即free space)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-2126" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2208" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-311" value="PAGE_MAX_TRX_ID(8B)&lt;br&gt;修改当前页的最大事务ID（仅二级索引中定义）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1806" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1888" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-312" value="PAGE_N_HEAP(2B)&lt;br&gt;页中记录数（含最小/最大/标记为删除的记录）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-2086" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2168" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-313" value="PAGE_FREE(2B)&lt;br&gt;1st标记为删除的记录地址（形成链表，可复用）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-2046" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2128" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-314" value="PAGE_GARBAGE(2B)&lt;br&gt;已删除记录占用的字节数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-2006" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2088" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-315" value="PAGE_LAST_INSERT(2B)&lt;br&gt;最后插入记录的位置" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1966" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2048" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-316" value="PAGE_DIRECTION(2B)&lt;br&gt;记录插入的方向" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1926" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-2008" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-317" value="PAGE_N_DIRECTION(2B)&lt;br&gt;一个方向连续插入的记录数" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1886" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1968" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-318" value="PAGE_N_RECS(2B)&lt;br&gt;页中记录数（不含最小/最大/标记为删除的记录）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1846" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1928" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-319" value="PAGE_BTR_SEG_TOP(10B)&lt;br&gt;B+树非叶子段的头部信息，仅在B+树的Root页定义" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1646" width="280" height="40" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-522" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-319" target="QwdAHC_jwGnzuMrW2I-O-520">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-319" value="PAGE_BTR_SEG_TOP(10B)&lt;br&gt;B+树非叶子段的头部信息，仅在B+树的Root页定义" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontColor=#EA6B66;" vertex="1" parent="1">
+          <mxGeometry x="-547" y="-1728" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-320" value="PAGE_LEVEL(2B)&lt;br&gt;页在B+树中所处的层级" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1766" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1848" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-321" value="PAGE_INDEX_ID(8B)&lt;br&gt;索引ID，表示当前页属于哪个索引" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1726" width="280" height="40" as="geometry" />
+          <mxGeometry x="-547" y="-1808" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-322" value="PAGE_BTR_SEG_LEAF(10B)&lt;br&gt;B+树叶子段的头部信息，仅在B+树的Root页定义" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-547" y="-1686" width="280" height="40" as="geometry" />
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-521" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-322" target="QwdAHC_jwGnzuMrW2I-O-518">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-322" value="PAGE_BTR_SEG_LEAF(10B)&lt;br&gt;B+树叶子段的头部信息，仅在B+树的Root页定义" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontColor=#EA6B66;" vertex="1" parent="1">
+          <mxGeometry x="-547" y="-1768" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-325" value="若新插入的一条记录的主键值比上一条记录的主键值大,则这条记录的插入方向是右边(反之则是左边).用PAGE_DIRECTION来表示最后一条记录插入方向的状态;连续几次插入新记录的方向都是一致的,InnoDB会把沿着同一个方向插入记录的条数记下来(PAGE_N_DIRECTION),若改变,则这个状态的值会被清零重新统计" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
-          <mxGeometry x="-830" y="-1800" width="281" height="120" as="geometry" />
+          <mxGeometry x="-831" y="-2020" width="281" height="120" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-326" value="查找记录过程：&lt;br&gt;1.定位到记录所在的页（基于页目录(Page Directory)，根据二分法快速定位到对应目录项，从而确定出记录所在页）&lt;br&gt;2.从所在的页内中查找相应的记录" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
           <mxGeometry x="1290" y="-2060" width="360" height="70" as="geometry" />
@@ -1207,6 +1204,12 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-419" value="IBUF_BITMAP(16KB)&lt;br&gt;存储本组所有区所有页关于INSERT BUFFER的信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
           <mxGeometry x="3360" y="-2960" width="280" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-514" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-420" target="QwdAHC_jwGnzuMrW2I-O-461">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-515" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-420" target="QwdAHC_jwGnzuMrW2I-O-463">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-420" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;整个表空间只有一个FSP_HDR类型的页&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="3640" y="-2990" width="240" height="30" as="geometry" />
         </mxCell>
@@ -1253,13 +1256,13 @@
           <mxGeometry x="2700" y="-2820" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-437" value="Segment ID(8B)&lt;br&gt;段唯一的编号（前提是该区已被分配给某段）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="4480" y="-3020" width="280" height="40" as="geometry" />
+          <mxGeometry x="5400" y="-2945" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-438" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;XDES Entry（对应一个区）&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="4532.5" y="-3050" width="175" height="30" as="geometry" />
+          <mxGeometry x="5452.5" y="-2975" width="175" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-439" value="List Node(12B)&lt;br&gt;将XDES Entry构成链表" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="4480" y="-2980" width="280" height="40" as="geometry" />
+          <mxGeometry x="5400" y="-2905" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-440" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Prev Node Page Number(4B)&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-758.5" y="-4300" width="180" height="40" as="geometry" />
@@ -1274,10 +1277,10 @@
           <mxGeometry x="-758.5" y="-4180" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-444" value="State(4B)&lt;br&gt;区的状态" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="4480" y="-2940" width="280" height="40" as="geometry" />
+          <mxGeometry x="5400" y="-2865" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-445" value="Page State Bitmap(16B)&lt;br&gt;区位图（每2bit对应一个页，1st=是否空闲）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="4480" y="-2900" width="280" height="40" as="geometry" />
+          <mxGeometry x="5400" y="-2825" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-446" value="&lt;div style=&quot;&quot;&gt;向表中添加数据本质是向表对应的各个索引的也字段和非叶子段插入数据&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="2310" y="-3260" width="290" height="60" as="geometry" />
@@ -1286,40 +1289,43 @@
           <mxGeometry x="3360" y="-3560" width="530" height="260" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-448" value="Segment ID(8B)&lt;br&gt;INODE Entry对应的段编号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-3020" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-3220" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-449" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;INODE Entry（对应一个段）&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="6032.5" y="-3050" width="175" height="30" as="geometry" />
+          <mxGeometry x="6362.5" y="-3250" width="175" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-450" value="NOT_FULL_N_USED(4B)&lt;br&gt;在NOT_FULL链表中已经使用了多少个页" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2980" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-3180" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-451" value="Magic Number(4B)&lt;br&gt;97937874(标识是否初始化)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2820" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-3020" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-452" value="List Base Node For FREE LIST(16B)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2940" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-3140" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-516" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;strokeColor=#0000CC;dashed=1;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-453" target="QwdAHC_jwGnzuMrW2I-O-439">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-453" value="List Base Node For FULL LIST(16B)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2860" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-3060" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-454" value="List Base Node For NOT_FULL LIST(16B)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2900" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-3100" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-455" value="Fragment Array Entry(4B)&lt;br&gt;一个零散页的页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2780" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-2980" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-456" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;向某个段插入数据的过程:&lt;/div&gt;&lt;div&gt;1.当段中数据较少时,先查看表空间中是否有状态=FREE_FRAG的区,若有则从该区中取零碎的页并把数据插进去;否则去表空间下申请一个状态=FREE的区,得到后将其状态=FREE_FRAG,从该区中取零碎的页并把数据插进去(该区的页会被不同段使用零碎页时获取,直到没有空闲,此时状态=FULL_FRAG);&lt;/div&gt;&lt;div&gt;2.当段中数据已经占满了32个零散的页时,直接申请完整的区来插入数据&lt;/div&gt;&lt;div&gt;---&amp;gt;段是一些零散页（对应&quot;Fragment Array Entry&quot;）和一些完整的区的集合&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontColor=#0000CC;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="3360" y="-3284" width="870" height="100" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-458" value="Fragment Array Entry(4B)&lt;br&gt;一个零散页的页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2740" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-2940" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-459" value="......" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="5980" y="-2700" width="280" height="40" as="geometry" />
+          <mxGeometry x="6310" y="-2900" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-460" value="共32个" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeWidth=2;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
-          <mxGeometry x="6270" y="-2765" width="20" height="90" as="geometry" />
+          <mxGeometry x="6600" y="-2965" width="20" height="90" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-482" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-461" target="QwdAHC_jwGnzuMrW2I-O-469">
           <mxGeometry relative="1" as="geometry" />
@@ -1397,31 +1403,31 @@
           <mxGeometry x="5250" y="-3420" width="20" height="100" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-488" value="&lt;b&gt;File Header&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="5540" y="-3000" width="300" height="30" as="geometry" />
+          <mxGeometry x="5780" y="-3294" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-489" value="List Node for INODE Page List(12B)&lt;br&gt;存储上一个INODE页和下一个INODE页的指针" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="5540" y="-2970" width="300" height="40" as="geometry" />
+          <mxGeometry x="5780" y="-3264" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-490" value="&lt;b&gt;File Trailer&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="5540" y="-2800" width="300" height="30" as="geometry" />
+          <mxGeometry x="5780" y="-3094" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-509" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-491" target="QwdAHC_jwGnzuMrW2I-O-448">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-491" value="INODE Entry0(192B)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="5540" y="-2930" width="300" height="30" as="geometry" />
+          <mxGeometry x="5780" y="-3224" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-510" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-492" target="QwdAHC_jwGnzuMrW2I-O-459">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-492" value="INODE Entry84(192B)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="5540" y="-2870" width="300" height="30" as="geometry" />
+          <mxGeometry x="5780" y="-3164" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-493" value="......" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="5540" y="-2900" width="300" height="30" as="geometry" />
+          <mxGeometry x="5780" y="-3194" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-494" value="Empty Space(5986B)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="5540" y="-2840" width="300" height="40" as="geometry" />
+          <mxGeometry x="5780" y="-3134" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-495" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;XDES类型页&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="4055" y="-2630" width="110" height="30" as="geometry" />
@@ -1451,10 +1457,22 @@
           <mxGeometry x="3960" y="-2439" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-508" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;INODE类型页&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="5635" y="-3028" width="110" height="30" as="geometry" />
+          <mxGeometry x="5875" y="-3322" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-513" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;新创建一个段(创建索引触发)时,都会创建一个INODE Entry结构:&lt;/div&gt;&lt;div&gt;SEG_INODES_FREE链表是否为空&lt;/div&gt;&lt;div&gt;(1)若不为空则直接从该链表中获取一个节点(得到一个仍有空闲空间的INODE类型页),并把该INODE Entry结构放到该页中(若该页无剩余空间,则需要放到SEG_INODES_FULL链表中);&lt;/div&gt;&lt;div&gt;(2)若为空则从表空间的FREE_FRAG链表中申请一个页,将该页的类型=INODE,并把该页放入SEG_INODES_FREE链表中,再把该INODE Entry结构放到该页中&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#000099;fontSize=13;fontFamily=Comic Sans MS;" vertex="1" parent="1">
-          <mxGeometry x="5030" y="-3150" width="500" height="140" as="geometry" />
+          <mxGeometry x="5330" y="-3236" width="400" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-517" value="Segment Header" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="-886" y="-1824.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-518" value="Space ID of INODE Entry(4B)&lt;br&gt;INODE Entry结构所在的表空间ID" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-960" y="-1791.5" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-519" value="Page Number of the INODE Entry(4B)&lt;br&gt;INODE Entry结构所在的页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-960" y="-1751.5" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-520" value="Byte Offset of the INODE Entry(2B)&lt;br&gt;INODE Entry结构在该页的偏移量" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-960" y="-1711.5" width="280" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
