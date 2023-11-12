@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-12T10:17:16.811Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="4beppsWo47j-Vpcz5IjB" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-12T10:25:04.840Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="cqUVuJnOiDAkeTwAHfBA" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1459,7 +1459,7 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-508" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;INODE类型页&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="5875" y="-3322" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="QwdAHC_jwGnzuMrW2I-O-513" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;新创建一个段(创建索引触发)时,都会创建一个INODE Entry结构:&lt;/div&gt;&lt;div&gt;SEG_INODES_FREE链表是否为空&lt;/div&gt;&lt;div&gt;(1)若不为空则直接从该链表中获取一个节点(得到一个仍有空闲空间的INODE类型页),并把该INODE Entry结构放到该页中(若该页无剩余空间,则需要放到SEG_INODES_FULL链表中);&lt;/div&gt;&lt;div&gt;(2)若为空则从表空间的FREE_FRAG链表中申请一个页,将该页的类型=INODE,并把该页放入SEG_INODES_FREE链表中,再把该INODE Entry结构放到该页中&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#000099;fontSize=13;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-513" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;新创建一个段(创建索引触发)时,都会创建一个INODE Entry结构:&lt;/div&gt;&lt;div&gt;SEG_INODES_FREE链表是否为空&lt;/div&gt;&lt;div&gt;(1)若不为空则直接从该链表中获取一个节点(得到一个仍有空闲空间的INODE类型页),并把该INODE Entry结构放到该页中(若该页无剩余空间,则需要放到SEG_INODES_FULL链表中);&lt;/div&gt;&lt;div&gt;(2)若为空则从表空间的FREE_FRAG链表中申请一个页,将该页的类型=INODE,并把该页放入SEG_INODES_FREE链表中,再把该INODE Entry结构放到该页中&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;fontFamily=Comic Sans MS;" vertex="1" parent="1">
           <mxGeometry x="5330" y="-3236" width="400" height="174" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-517" value="Segment Header" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
@@ -1473,6 +1473,9 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-520" value="Byte Offset of the INODE Entry(2B)&lt;br&gt;INODE Entry结构在该页的偏移量" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-960" y="-1711.5" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-523" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;PAGE_BTR_SEG_LEAF/PAGE_BTR_SEG_TOP分别记录着叶子节点段和非叶子节点段对应的INODE Entry结构的地址(表空间+页号+偏移量).故建立了索引和其对应的段的关系(一个索引只对应两个段,只需要在索引的根页中记录这两个结构即可).&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+          <mxGeometry x="-1311" y="-1873" width="416" height="86" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
