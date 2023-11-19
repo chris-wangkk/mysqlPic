@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-13T12:34:06.423Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="i2bnYjanvcTRQxpq7KAJ" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-19T09:29:00.743Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="kLKNG7PftycJpm-yeUai" version="22.0.8" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="2750" dy="5025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -899,7 +899,7 @@
           <mxGeometry x="-1009" y="-1475" width="30" height="20" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-305" value="分组约束：&lt;br&gt;对于最小记录所在的分组只能有&amp;nbsp;1&amp;nbsp;条记录，最大记录所在的分组拥有的记录条数只能在&amp;nbsp;1~8&amp;nbsp;条之间，剩下的分组中记录的条数范围只能在是&amp;nbsp;4~8&amp;nbsp;条之间" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-458.5" y="-1200" width="300" height="60" as="geometry" />
+          <mxGeometry x="-555" y="-1200" width="300" height="60" as="geometry" />
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-306" value="各个槽代表的记录的主键值都是从小到大排序的，所以可以使用所谓的二分法来进行快速查找" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1259" y="-1530" width="210" height="60" as="geometry" />
@@ -1704,6 +1704,82 @@
         </mxCell>
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-607" value="&lt;font color=&quot;#0000cc&quot;&gt;free链表&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
           <mxGeometry x="-150" y="-840" width="62" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-608" value="记录Buffer Pool中哪些缓存页是可用的&lt;br&gt;链表的基节点占用的内存空间并不包含在为Buffer Pool申请的一大片连续内存空间之内,而是单独申请的一块内存空间" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="-850" width="320" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-609" value="&lt;div&gt;如何确认要访问的页是否在Buffer Pool中且快速定位?&lt;/div&gt;&lt;div&gt;构建哈希表:key=表空间号+页号,val=缓存页地址(有则直接用,无则从free链表中选取一个空闲缓存页并加载)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="-1070" width="365.75" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-610" value="&lt;b&gt;count&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-88" y="-630" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-611" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;start&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-88" y="-610" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-612" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;end&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-88" y="-590" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-613" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-611" target="QwdAHC_jwGnzuMrW2I-O-618">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="96" y="-610" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-614" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-612" target="QwdAHC_jwGnzuMrW2I-O-628">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="96" y="-510" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-615" value="List Base Node" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-88" y="-650" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-616" value="&lt;b&gt;prev&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-570" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-617" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-618" target="QwdAHC_jwGnzuMrW2I-O-623">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-618" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;next&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-550" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-619" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;data&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-530" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-620" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-621" target="QwdAHC_jwGnzuMrW2I-O-616">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-621" value="&lt;b&gt;prev&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-570" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-622" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-623" target="QwdAHC_jwGnzuMrW2I-O-627">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-623" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;next&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-550" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-624" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;data&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="-530" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-625" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QwdAHC_jwGnzuMrW2I-O-626" target="QwdAHC_jwGnzuMrW2I-O-621">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-626" value="&lt;b&gt;prev&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="-570" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-627" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;next&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="-550" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-628" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;data&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="-530" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-629" value="List Node" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="320" y="-590" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-630" value="&lt;font color=&quot;#0000cc&quot;&gt;flush链表&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="-640" width="62" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QwdAHC_jwGnzuMrW2I-O-631" value="&lt;div&gt;记录Buffer Pool中哪些缓存页是脏页(有修改导致和磁盘上的页不一致)&lt;/div&gt;&lt;div&gt;每次修改缓存页后,并不立即把修改同步到磁盘上,而是在未来的某个时间点进行同步&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="-650" width="320" height="75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
