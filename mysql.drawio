@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T08:14:18.768Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="HdqIHYKqFOT6NLlztk1i" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T08:41:01.592Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="mr1Kx4Gb7-C3ZjaPZSF1" version="22.1.4" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1783,6 +1783,129 @@
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;innoDB核心数据结构&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="2540" y="-2867.5" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-2" value="&lt;div&gt;redo日志&lt;/div&gt;&lt;div&gt;为保证磁盘和内存中数据的一致性，记录修改了哪些东西（如某事务将系统表空间中的第N号页面中偏移量=M处的字节值由1-&amp;gt;2），在事务提交时，把上述内容刷新到磁盘中。即使之后系统崩溃了，重启后也只要按照上述内容所记录的步骤重新更新一下数据页即可。&lt;/div&gt;&lt;div&gt;vs 提交事务时直接把事务修改到的所有页面刷新到磁盘：&lt;/div&gt;&lt;div&gt;1.占用空间非常小&lt;/div&gt;&lt;div&gt;2.顺序写入磁盘&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="-440" width="430" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-360" y="-530" as="sourcePoint" />
+            <mxPoint x="-360" y="-440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-6" target="uH2WkrMNkw98TE_kD1RD-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-16" value="简单类型（物理日志）&lt;br&gt;只需记录在某个页面某个偏移量处修改了几个字节" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uH2WkrMNkw98TE_kD1RD-15">
+          <mxGeometry x="-0.08" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-6" target="uH2WkrMNkw98TE_kD1RD-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-880" y="-250" />
+              <mxPoint x="-880" y="-20" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-24" value="复杂类型（既包含物理信息，又包含逻辑信息）" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uH2WkrMNkw98TE_kD1RD-23">
+          <mxGeometry x="-0.0028" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-6" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-635" y="-270" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-7" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-450" y="-270" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-8" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-265" y="-270" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-9" value="&lt;b&gt;data&lt;br&gt;日志具体内容&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="-270" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-10" value="redo日志格式" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="-635" y="-300" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-11" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-635" y="-160" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-12" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-450" y="-160" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-13" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-265" y="-160" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-14" value="&lt;b&gt;offset&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="-160" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-17" value="具体数据" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="207.5" y="-160" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-18" value="&lt;b&gt;len&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-160" width="127.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-19" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-635" y="-40" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-20" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-450" y="-40" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-21" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-265" y="-40" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-22" value="&lt;b&gt;data&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="-40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-25" value="&lt;b&gt;n_fields&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="-100" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-26" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;n_uniques&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="-80" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-27" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;field1_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="-60" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-28" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;field2_len&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="-40" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-29" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;...&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="-20" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-30" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;fieldn_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-31" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;offset&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="20" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-32" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;end_seg_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="40" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-33" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;info bits&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="60" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-34" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;extra_size&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="80" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-35" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;mismatch index&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="100" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-36" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;真实数据&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="91.5" y="120" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-37" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="-90" width="21.5" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-38" value="该条记录有多少个字段" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="230" y="-100" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-39" value="前一条记录的地址" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="230" y="20" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-40" value="系统重启后，并不能直接根据这些日志记录的内容进行重写恢复，而是要调用预先准备的函数，才能将页面恢复" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-274" y="25" width="310" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
