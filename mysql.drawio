@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T09:32:15.986Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="3S6e8Ce6wt2stz5d0vM_" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T09:41:03.298Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="IBELMoPoOjM5d0hncgPz" version="22.1.4" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -2012,32 +2012,50 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-74" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-979" y="959" width="120" height="40" as="geometry" />
+          <mxGeometry x="-950" y="1083" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-75" target="uH2WkrMNkw98TE_kD1RD-77">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-75" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-780" y="959" width="120" height="40" as="geometry" />
+          <mxGeometry x="-751" y="1083" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;strokeWidth=2;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-76" target="uH2WkrMNkw98TE_kD1RD-74">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-254" y="979" />
-              <mxPoint x="-254" y="1030" />
-              <mxPoint x="-999" y="1030" />
-              <mxPoint x="-999" y="979" />
+              <mxPoint x="-225" y="1103" />
+              <mxPoint x="-225" y="1030" />
+              <mxPoint x="-970" y="1030" />
+              <mxPoint x="-970" y="1103" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-76" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-394" y="959" width="120" height="40" as="geometry" />
+          <mxGeometry x="-365" y="1083" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-77" target="uH2WkrMNkw98TE_kD1RD-76">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-77" value="......" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="-584" y="959" width="120" height="40" as="geometry" />
+          <mxGeometry x="-555" y="1083" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-84" value="&lt;div&gt;磁盘上的 redo 日志文件是以一个 日志文件组 的形式出现的。这些文件以 ib_logfile[数字] 的形式进行命名。&lt;/div&gt;&lt;div&gt;redo 日志写入时，先是从 ib_logfile0 开始写，如果 ib_logfile0 写满了，就接着 ib_logfile1 写，若 ib_logfile1 写满了就去写 ib_logfile2 ......依此类推。&lt;/div&gt;&lt;div&gt;当最后一个文件写满后，就重新跳转到 ib_logfile0 继续写&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;redo日志文件大小一样，格式也一样，由2部分组成：&lt;/div&gt;&lt;div&gt;1.前2048个字节（4个blk）用来存储管理信息&lt;/div&gt;&lt;div&gt;2.从2048字节后用来存储 log buffer 中的block镜像&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-1370" y="855" width="600" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-86" value="&lt;b&gt;log file header&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1311" y="1174" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-87" value="&lt;b&gt;checkpoint1&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1126" y="1174" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-88" value="&lt;b&gt;unuse&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-941" y="1174" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-89" value="&lt;b&gt;checkpoint2&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-756" y="1174" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-90" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-90;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-950" y="954" width="20" height="384" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
