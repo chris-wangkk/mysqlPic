@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T08:41:01.592Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="mr1Kx4Gb7-C3ZjaPZSF1" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T09:13:21.969Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="IZvM7cr65DE5MXV7T4Jy" version="22.1.4" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1906,6 +1906,89 @@
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-40" value="系统重启后，并不能直接根据这些日志记录的内容进行重写恢复，而是要调用预先准备的函数，才能将页面恢复" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="-274" y="25" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-41" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-635" y="20" as="sourcePoint" />
+            <mxPoint x="-635" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-42" value="Mini-Transaction（mtr）&lt;br&gt;&lt;br&gt;InnoDB引擎中，向某个索引对应的B+树插入一条记录的过程应该是原子的，而很多场景下一条操作由于涉及多个页面的修改因此会产生多条redo日志，因此规定在只需操作时需要以组的形式来记录redo日志（在进行系统奔溃重启恢复时，针对某个组中的 redo 日志，要么把全部的日志都恢复掉，要么一条也不恢复）&lt;br&gt;&lt;br&gt;通过mtr生成的redo日志放在大小=512B的blk中" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-825" y="120" width="375" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-43" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-725" y="314" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-44" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-725" y="354" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-45" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-725" y="394" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-46" value="&lt;b&gt;blk唯一标号（4B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="274" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-47" value="&lt;b&gt;已使用了多少字节（2B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="304" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-48" value="&lt;b&gt;第一个mtr生成日志组的偏移量&lt;br&gt;2B&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="334" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-49" value="&lt;b&gt;checkpoint（4B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="364" width="185" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-50" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="284" width="20" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-51" value="log buffer&lt;br&gt;&lt;br&gt;为了解决磁盘速度过慢的问题，写入redo 日志时也不能直接直接写到磁盘上。类似Buffer Pool，服务器在启动时也申请了一块连续内存作为redo日志缓冲区（通过启动参数 innodb_log_buffer_size 来指定大小）&lt;br&gt;&lt;br&gt;这块内存空间被划分成若干个连续的redo log blk" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-839" y="456" width="375" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-52" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-949" y="604" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-53" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-949" y="644" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-54" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-949" y="684" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-55" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-764" y="604" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-56" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-764" y="644" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-57" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-764" y="684" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-58" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-579" y="604" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-59" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-579" y="644" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-60" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-579" y="684" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-61" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-394" y="604" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-62" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-394" y="644" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-63" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-394" y="684" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-64" value="&lt;b&gt;...&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-209" y="604" width="98.5" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-66" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-950" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-65" value="&lt;div&gt;buf_free&lt;/div&gt;&lt;div&gt;标记应该写到哪个block的哪处位置&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-1282.5" y="593" width="195" height="51" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
