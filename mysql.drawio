@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T09:13:21.969Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="IZvM7cr65DE5MXV7T4Jy" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T09:19:06.276Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="Pwx-J5Y73PxWOhbKKv4k" version="22.1.4" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
-    <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4568" dy="6082" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1989,6 +1989,18 @@
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-65" value="&lt;div&gt;buf_free&lt;/div&gt;&lt;div&gt;标记应该写到哪个block的哪处位置&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
           <mxGeometry x="-1282.5" y="593" width="195" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-67" value="REDO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+          <mxGeometry x="-1230" y="-340" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-68" value="数据&amp;amp;索引" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+          <mxGeometry x="-1430" y="-2280" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-69" value="表空间" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+          <mxGeometry x="980" y="-3700" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-70" value="UNDO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+          <mxGeometry x="4580" y="64" width="270" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
