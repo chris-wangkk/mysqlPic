@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-03T09:44:42.181Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="EsdophGeGKsuvzjkZTmW" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-03T10:01:22.289Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="YK6hZ4FVzZ_Dmpc9Yd43" version="22.1.4" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -2244,6 +2244,9 @@
         </mxCell>
         <mxCell id="uH2WkrMNkw98TE_kD1RD-156" value="redo日志还未刷新到磁盘里" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#0000CC;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="572" y="1306" width="130" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-157" value="redo日志如何进行崩溃恢复：&lt;br&gt;1.确定恢复的起点&lt;br&gt;从checkpoint_lsn开始读取redo日志来恢复（根据checkpoint_no里最近的那次），即拿到里面的日志文件组的偏移量&lt;br&gt;2.确定恢复的终点&lt;br&gt;根据log blk header中的LOG_BLOCK_HDR_DATA_LEN：对于未填满的blk而言该值=512，故值!=512的blk就是最后一个&lt;br&gt;3.如何恢复&lt;br&gt;(1)哈希表&lt;br&gt;key=spaceId+pageNumber，val=同一页面的redo日志列表（按生成先后顺序连接）&lt;br&gt;避免随机IO，加快速度&lt;br&gt;(2)跳过已刷新到磁盘的页面&lt;br&gt;页-&amp;gt;File Header-&amp;gt;FIL_PAGE_LSN属性记录了最近一次修改页面时对应的LSN值(即n_m)，若其大于checkpoint_isn，则表示已经刷过（其他场景触发的）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+          <mxGeometry x="-795" y="1580" width="617" height="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
