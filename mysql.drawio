@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-03T10:01:22.289Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="YK6hZ4FVzZ_Dmpc9Yd43" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-08T12:27:36.669Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="TJ6kPxyfMDs4_mNcPYLt" version="22.1.7" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
-    <mxGraphModel dx="3134" dy="5241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2750" dy="5025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1781,27 +1781,27 @@
         <mxCell id="QwdAHC_jwGnzuMrW2I-O-631" value="&lt;div&gt;记录Buffer Pool中哪些缓存页是脏页(有修改导致和磁盘上的页不一致)&lt;/div&gt;&lt;div&gt;每次修改缓存页后,并不立即把修改同步到磁盘上,而是在未来的某个时间点进行同步&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-470" y="-650" width="320" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;innoDB核心数据结构&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;innoDB核心数据结构&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="2540" y="-2867.5" width="150" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-2" value="&lt;div&gt;redo日志&lt;/div&gt;&lt;div&gt;为保证磁盘和内存中数据的一致性，记录修改了哪些东西（如某事务将系统表空间中的第N号页面中偏移量=M处的字节值由1-&amp;gt;2），在事务提交时，把上述内容刷新到磁盘中。即使之后系统崩溃了，重启后也只要按照上述内容所记录的步骤重新更新一下数据页即可。&lt;/div&gt;&lt;div&gt;vs 提交事务时直接把事务修改到的所有页面刷新到磁盘：&lt;/div&gt;&lt;div&gt;1.占用空间非常小&lt;/div&gt;&lt;div&gt;2.顺序写入磁盘&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-2" value="&lt;div&gt;redo日志&lt;/div&gt;&lt;div&gt;为保证磁盘和内存中数据的一致性，记录修改了哪些东西（如某事务将系统表空间中的第N号页面中偏移量=M处的字节值由1-&amp;gt;2），在事务提交时，把上述内容刷新到磁盘中。即使之后系统崩溃了，重启后也只要按照上述内容所记录的步骤重新更新一下数据页即可。&lt;/div&gt;&lt;div&gt;vs 提交事务时直接把事务修改到的所有页面刷新到磁盘：&lt;/div&gt;&lt;div&gt;1.占用空间非常小&lt;/div&gt;&lt;div&gt;2.顺序写入磁盘&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-570" y="-440" width="430" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#999999;" edge="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#999999;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-360" y="-530" as="sourcePoint" />
             <mxPoint x="-360" y="-440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-6" target="uH2WkrMNkw98TE_kD1RD-11">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" parent="1" source="uH2WkrMNkw98TE_kD1RD-6" target="uH2WkrMNkw98TE_kD1RD-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-16" value="简单类型（物理日志）&lt;br&gt;只需记录在某个页面某个偏移量处修改了几个字节" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uH2WkrMNkw98TE_kD1RD-15">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-16" value="简单类型（物理日志）&lt;br&gt;只需记录在某个页面某个偏移量处修改了几个字节" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="uH2WkrMNkw98TE_kD1RD-15" vertex="1" connectable="0">
           <mxGeometry x="-0.08" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-6" target="uH2WkrMNkw98TE_kD1RD-19">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" parent="1" source="uH2WkrMNkw98TE_kD1RD-6" target="uH2WkrMNkw98TE_kD1RD-19" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-880" y="-250" />
@@ -1809,218 +1809,218 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-24" value="复杂类型（既包含物理信息，又包含逻辑信息）" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uH2WkrMNkw98TE_kD1RD-23">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-24" value="复杂类型（既包含物理信息，又包含逻辑信息）" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="uH2WkrMNkw98TE_kD1RD-23" vertex="1" connectable="0">
           <mxGeometry x="-0.0028" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-6" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-6" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-635" y="-270" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-7" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-7" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-450" y="-270" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-8" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-8" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-265" y="-270" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-9" value="&lt;b&gt;data&lt;br&gt;日志具体内容&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-9" value="&lt;b&gt;data&lt;br&gt;日志具体内容&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-80" y="-270" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-10" value="redo日志格式" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-10" value="redo日志格式" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" parent="1" vertex="1">
           <mxGeometry x="-635" y="-300" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-11" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-11" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-635" y="-160" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-12" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-12" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-450" y="-160" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-13" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-13" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-265" y="-160" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-14" value="&lt;b&gt;offset&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-14" value="&lt;b&gt;offset&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-80" y="-160" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-17" value="具体数据" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-17" value="具体数据" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="207.5" y="-160" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-18" value="&lt;b&gt;len&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-18" value="&lt;b&gt;len&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="80" y="-160" width="127.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-19" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-19" value="&lt;b&gt;type&lt;br&gt;redo日志类型&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-635" y="-40" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-20" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-20" value="&lt;b&gt;space ID&lt;br&gt;表空间ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-450" y="-40" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-21" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-21" value="&lt;b&gt;page number&lt;br&gt;页号&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-265" y="-40" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-22" value="&lt;b&gt;data&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-22" value="&lt;b&gt;data&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-80" y="-40" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-25" value="&lt;b&gt;n_fields&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-25" value="&lt;b&gt;n_fields&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="-100" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-26" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;n_uniques&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-26" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;n_uniques&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="-80" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-27" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;field1_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-27" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;field1_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="-60" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-28" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;field2_len&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-28" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;field2_len&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="-40" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-29" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;...&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-29" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;...&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="-20" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-30" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;fieldn_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-30" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;fieldn_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-31" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;offset&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-31" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;offset&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="20" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-32" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;end_seg_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-32" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;end_seg_len&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="40" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-33" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;info bits&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-33" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;info bits&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="60" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-34" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;extra_size&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-34" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;extra_size&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="80" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-35" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;mismatch index&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-35" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;mismatch index&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="100" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-36" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;真实数据&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-36" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;真实数据&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="91.5" y="120" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-37" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-37" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="50" y="-90" width="21.5" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-38" value="该条记录有多少个字段" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-38" value="该条记录有多少个字段" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="230" y="-100" width="170" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-39" value="前一条记录的地址" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-39" value="前一条记录的地址" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="230" y="20" width="170" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-40" value="系统重启后，并不能直接根据这些日志记录的内容进行重写恢复，而是要调用预先准备的函数，才能将页面恢复" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-40" value="系统重启后，并不能直接根据这些日志记录的内容进行重写恢复，而是要调用预先准备的函数，才能将页面恢复" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-274" y="25" width="310" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-41" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#999999;" edge="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-41" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#999999;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-635" y="20" as="sourcePoint" />
             <mxPoint x="-635" y="110" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-42" value="Mini-Transaction（mtr）&lt;br&gt;&lt;br&gt;InnoDB引擎中，向某个索引对应的B+树插入一条记录的过程应该是原子的，而很多场景下一条操作由于涉及多个页面的修改因此会产生多条redo日志，因此规定在只需操作时需要以组的形式来记录redo日志（在进行系统奔溃重启恢复时，针对某个组中的 redo 日志，要么把全部的日志都恢复掉，要么一条也不恢复）&lt;br&gt;&lt;br&gt;通过mtr生成的redo日志放在大小=512B的blk中" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-42" value="Mini-Transaction（mtr）&lt;br&gt;&lt;br&gt;InnoDB引擎中，向某个索引对应的B+树插入一条记录的过程应该是原子的，而很多场景下一条操作由于涉及多个页面的修改因此会产生多条redo日志，因此规定在只需操作时需要以组的形式来记录redo日志（在进行系统奔溃重启恢复时，针对某个组中的 redo 日志，要么把全部的日志都恢复掉，要么一条也不恢复）&lt;br&gt;&lt;br&gt;通过mtr生成的redo日志放在大小=512B的blk中" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-825" y="120" width="375" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-43" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-43" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-725" y="314" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-44" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-44" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-725" y="354" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-45" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-45" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-725" y="394" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-46" value="&lt;b&gt;blk唯一标号（4B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-46" value="&lt;b&gt;blk唯一标号（4B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-470" y="274" width="185" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-47" value="&lt;b&gt;已使用了多少字节（2B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-47" value="&lt;b&gt;已使用了多少字节（2B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-470" y="304" width="185" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-48" value="&lt;b&gt;第一个mtr生成日志组的偏移量&lt;br&gt;2B&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-48" value="&lt;b&gt;第一个mtr生成日志组的偏移量&lt;br&gt;2B&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-470" y="334" width="185" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-49" value="&lt;b&gt;checkpoint（4B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-49" value="&lt;b&gt;checkpoint（4B）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-470" y="364" width="185" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-50" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-50" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
           <mxGeometry x="-520" y="284" width="20" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-51" value="log buffer&lt;br&gt;&lt;br&gt;为了解决磁盘速度过慢的问题，写入redo 日志时也不能直接直接写到磁盘上。类似Buffer Pool，服务器在启动时也申请了一块连续内存作为redo日志缓冲区（通过启动参数 innodb_log_buffer_size 来指定大小）&lt;br&gt;&lt;br&gt;这块内存空间被划分成若干个连续的redo log blk" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-51" value="log buffer&lt;br&gt;&lt;br&gt;为了解决磁盘速度过慢的问题，写入redo 日志时也不能直接直接写到磁盘上。类似Buffer Pool，服务器在启动时也申请了一块连续内存作为redo日志缓冲区（通过启动参数 innodb_log_buffer_size 来指定大小）&lt;br&gt;&lt;br&gt;这块内存空间被划分成若干个连续的redo log blk" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-839" y="456" width="375" height="116" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-52" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-52" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-949" y="604" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-53" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-53" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-949" y="644" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-54" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-54" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-949" y="684" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-55" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-55" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-764" y="604" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-56" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-56" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-764" y="644" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-57" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-57" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-764" y="684" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-58" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-58" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-579" y="604" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-59" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-59" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-579" y="644" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-60" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-60" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-579" y="684" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-61" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-61" value="&lt;b&gt;log blk header(12B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-394" y="604" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-62" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-62" value="&lt;b&gt;log blk body(496B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-394" y="644" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-63" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-63" value="&lt;b&gt;log blk trailer(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-394" y="684" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-64" value="&lt;b&gt;...&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-64" value="&lt;b&gt;...&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-209" y="604" width="98.5" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-66" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-65">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-66" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-65" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-950" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-65" value="&lt;div&gt;buf_free&lt;/div&gt;&lt;div&gt;标记应该写到哪个block的哪处位置&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-65" value="&lt;div&gt;buf_free&lt;/div&gt;&lt;div&gt;标记应该写到哪个block的哪处位置&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-1330" y="623" width="195" height="51" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-67" value="REDO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-67" value="REDO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" parent="1" vertex="1">
           <mxGeometry x="-1230" y="-340" width="270" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-68" value="数据&amp;amp;索引" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-68" value="数据&amp;amp;索引" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" parent="1" vertex="1">
           <mxGeometry x="-1430" y="-2280" width="270" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-69" value="表空间" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-69" value="表空间" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" parent="1" vertex="1">
           <mxGeometry x="980" y="-3700" width="270" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-70" value="UNDO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-70" value="UNDO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" parent="1" vertex="1">
           <mxGeometry x="4580" y="64" width="270" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-71" value="当mtr结束时，其过程中产生的一组redo日志会全部复制到log buffer中&lt;br&gt;不同事务可能是并发执行的，故其产生的redo日志组可能也是交替写入log buffer中的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-71" value="当mtr结束时，其过程中产生的一组redo日志会全部复制到log buffer中&lt;br&gt;不同事务可能是并发执行的，故其产生的redo日志组可能也是交替写入log buffer中的" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-1459" y="677" width="470" height="47" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-73" value="redo日志何时刷盘&lt;br&gt;&lt;br&gt;&lt;div&gt;(1)log buffer 空间不足时&lt;/div&gt;&lt;div&gt;(2)事务提交时&lt;/div&gt;&lt;div&gt;(3)后台线程定时刷新&lt;/div&gt;&lt;div&gt;(4)checkpoint&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-73" value="redo日志何时刷盘&lt;br&gt;&lt;br&gt;&lt;div&gt;(1)log buffer 空间不足时&lt;/div&gt;&lt;div&gt;(2)事务提交时&lt;/div&gt;&lt;div&gt;(3)后台线程定时刷新&lt;/div&gt;&lt;div&gt;(4)checkpoint&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-949" y="752" width="169" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-74" target="uH2WkrMNkw98TE_kD1RD-75">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="uH2WkrMNkw98TE_kD1RD-74" target="uH2WkrMNkw98TE_kD1RD-75" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-74" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-74" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-950" y="1083" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-75" target="uH2WkrMNkw98TE_kD1RD-77">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" parent="1" source="uH2WkrMNkw98TE_kD1RD-75" target="uH2WkrMNkw98TE_kD1RD-77" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-75" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-75" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-751" y="1083" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;strokeWidth=2;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-76" target="uH2WkrMNkw98TE_kD1RD-74">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;strokeWidth=2;" parent="1" source="uH2WkrMNkw98TE_kD1RD-76" target="uH2WkrMNkw98TE_kD1RD-74" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-225" y="1103" />
@@ -2030,93 +2030,93 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-76" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-76" value="ib_logfile0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-365" y="1083" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-77" target="uH2WkrMNkw98TE_kD1RD-76">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" parent="1" source="uH2WkrMNkw98TE_kD1RD-77" target="uH2WkrMNkw98TE_kD1RD-76" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-77" value="......" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-77" value="......" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=13;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-555" y="1083" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-84" value="&lt;div&gt;磁盘上的 redo 日志文件是以一个 日志文件组 的形式出现的。这些文件以 ib_logfile[数字] 的形式进行命名。&lt;/div&gt;&lt;div&gt;redo 日志写入时，先是从 ib_logfile0 开始写，如果 ib_logfile0 写满了，就接着 ib_logfile1 写，若 ib_logfile1 写满了就去写 ib_logfile2 ......依此类推。&lt;/div&gt;&lt;div&gt;当最后一个文件写满后，就重新跳转到 ib_logfile0 继续写&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;redo日志文件大小一样，格式也一样，由2部分组成：&lt;/div&gt;&lt;div&gt;1.前2048个字节（4个blk）用来存储管理信息&lt;/div&gt;&lt;div&gt;2.从2048字节后用来存储 log buffer 中的block镜像&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-84" value="&lt;div&gt;磁盘上的 redo 日志文件是以一个 日志文件组 的形式出现的。这些文件以 ib_logfile[数字] 的形式进行命名。&lt;/div&gt;&lt;div&gt;redo 日志写入时，先是从 ib_logfile0 开始写，如果 ib_logfile0 写满了，就接着 ib_logfile1 写，若 ib_logfile1 写满了就去写 ib_logfile2 ......依此类推。&lt;/div&gt;&lt;div&gt;当最后一个文件写满后，就重新跳转到 ib_logfile0 继续写&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;redo日志文件大小一样，格式也一样，由2部分组成：&lt;/div&gt;&lt;div&gt;1.前2048个字节（4个blk）用来存储管理信息&lt;/div&gt;&lt;div&gt;2.从2048字节后用来存储 log buffer 中的block镜像&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-1370" y="855" width="600" height="144" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-96" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-86" target="uH2WkrMNkw98TE_kD1RD-91">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-96" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-86" target="uH2WkrMNkw98TE_kD1RD-91" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-97" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-86" target="uH2WkrMNkw98TE_kD1RD-91">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-97" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-86" target="uH2WkrMNkw98TE_kD1RD-91" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-86" value="&lt;b&gt;log file header&lt;br&gt;redo日志文件一些整体属性&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-86" value="&lt;b&gt;log file header&lt;br&gt;redo日志文件一些整体属性&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1311" y="1174" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-106" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-87" target="uH2WkrMNkw98TE_kD1RD-98">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-106" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-87" target="uH2WkrMNkw98TE_kD1RD-98" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-87" value="&lt;b&gt;checkpoint1&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-87" value="&lt;b&gt;checkpoint1&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1126" y="1174" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-107" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-88" target="uH2WkrMNkw98TE_kD1RD-98">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-107" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-88" target="uH2WkrMNkw98TE_kD1RD-98" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-88" value="&lt;b&gt;unuse&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-88" value="&lt;b&gt;unuse&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-941" y="1174" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-89" value="&lt;b&gt;checkpoint2&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-89" value="&lt;b&gt;checkpoint2&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-756" y="1174" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-90" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-90;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-90" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-90;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-950" y="954" width="20" height="384" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-91" value="&lt;b&gt;LOG_HEADER_FORMAT(4B)&lt;br&gt;redo日志版本&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-91" value="&lt;b&gt;LOG_HEADER_FORMAT(4B)&lt;br&gt;redo日志版本&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1440" y="1284.5" width="200" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-92" value="&lt;b&gt;LOG_HEADER_START_LSN(8B)&lt;br&gt;标记该redo日志文件开始的LSN值&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-92" value="&lt;b&gt;LOG_HEADER_START_LSN(8B)&lt;br&gt;标记该redo日志文件开始的LSN值&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1440" y="1358.5" width="200" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-93" value="&lt;b&gt;LOG_HEADER_PAD1(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-93" value="&lt;b&gt;LOG_HEADER_PAD1(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1440" y="1321.5" width="200" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-94" value="&lt;b&gt;LOG_BLOCK_CHECKSUM(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-94" value="&lt;b&gt;LOG_BLOCK_CHECKSUM(4B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1440" y="1432.5" width="200" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-95" value="&lt;b&gt;LOG_HEADER_CREATOR(32B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-95" value="&lt;b&gt;LOG_HEADER_CREATOR(32B)&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1440" y="1395.5" width="200" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-98" value="&lt;b&gt;LOG_CHECKPOINT_NO(8B)&lt;br&gt;每做一次checkpoint该值就+1&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-98" value="&lt;b&gt;LOG_CHECKPOINT_NO(8B)&lt;br&gt;每做一次checkpoint该值就+1&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1210" y="1364.5" width="250" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-99" value="&lt;b&gt;LOG_CHECKPOINT_OFFSET(8B)&lt;br&gt;上面LSN值在redo日志文件组中偏移值&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-99" value="&lt;b&gt;LOG_CHECKPOINT_OFFSET(8B)&lt;br&gt;上面LSN值在redo日志文件组中偏移值&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1210" y="1461.5" width="250" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-100" value="&lt;b&gt;LOG_CHECKPOINT_LSN(8B)&lt;br&gt;checkpoint结束时对应LSN&lt;br&gt;系统崩溃恢复时将从该值开始&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-100" value="&lt;b&gt;LOG_CHECKPOINT_LSN(8B)&lt;br&gt;checkpoint结束时对应LSN&lt;br&gt;系统崩溃恢复时将从该值开始&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1210" y="1401.5" width="250" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-102" value="LOG_CHECKPOINT_LOG_BUF_SIZE(8B)&lt;br&gt;做checkpoint时对应log buffer大小" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-102" value="LOG_CHECKPOINT_LOG_BUF_SIZE(8B)&lt;br&gt;做checkpoint时对应log buffer大小" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-1210" y="1498.5" width="250" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-103" value="&lt;b&gt;unuse&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-103" value="&lt;b&gt;unuse&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1210" y="1535.5" width="250" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-105" value="&lt;b&gt;LOG_BLOCK_CHECKSUM(4B)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-105" value="&lt;b&gt;LOG_BLOCK_CHECKSUM(4B)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-1210" y="1572.5" width="250" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-108" value="buf_free(指向) / buf_next_to_write(指向)&lt;br&gt;lsn(写入redo日志量的一个总和，初始值=8704+12=8716) / flushed_to_disk_lsn&lt;br&gt;&lt;br&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;若某mtr产生的日志占用空间未跨blk时，lsn+=redo日志占用字节数；若跨blk，lsn+=redo日志占用字节数+额外的log blk header&amp;amp;log blk trailer&lt;br&gt;如果lsn==flushed_to_disk_lsn时，说明log buffer中的所有redo日志都已经刷新到磁盘中&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;checkpoint_lsn(当前系统中可以被覆盖的redo日志总量)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=14;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-108" value="buf_free(指向) / buf_next_to_write(指向)&lt;br&gt;lsn(写入redo日志量的一个总和，初始值=8704+12=8716) / flushed_to_disk_lsn&lt;br&gt;&lt;br&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;若某mtr产生的日志占用空间未跨blk时，lsn+=redo日志占用字节数；若跨blk，lsn+=redo日志占用字节数+额外的log blk header&amp;amp;log blk trailer&lt;br&gt;如果lsn==flushed_to_disk_lsn时，说明log buffer中的所有redo日志都已经刷新到磁盘中&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;checkpoint_lsn(当前系统中可以被覆盖的redo日志总量)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=14;fontFamily=Comic Sans MS;" parent="1" vertex="1">
           <mxGeometry x="-80" y="778.25" width="630" height="241.75" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-109" value="每一组由mtr生成的redo日志都有一个唯一的LSN值与之对应（LSN越小，对应redo日志产生的越早）&lt;br&gt;&lt;br&gt;若redo日志对应的脏页已经刷新到磁盘，则其占用的磁盘空间则不再有用处（可以被覆盖）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-109" value="每一组由mtr生成的redo日志都有一个唯一的LSN值与之对应（LSN越小，对应redo日志产生的越早）&lt;br&gt;&lt;br&gt;若redo日志对应的脏页已经刷新到磁盘，则其占用的磁盘空间则不再有用处（可以被覆盖）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-930" y="1417" width="617" height="47" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-111" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-110">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-111" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-110" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-950" y="650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-110" value="&lt;div&gt;buf_next_to_write&lt;/div&gt;&lt;div&gt;标记当前log buffer中已经有哪些日志被刷新到磁盘中&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-110" value="&lt;div&gt;buf_next_to_write&lt;/div&gt;&lt;div&gt;标记当前log buffer中已经有哪些日志被刷新到磁盘中&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-1435" y="538.5" width="300" height="51" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;strokeWidth=3;" edge="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;strokeWidth=3;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="570" y="-440" as="targetPoint" />
             <mxPoint x="470" y="530" as="sourcePoint" />
@@ -2128,125 +2128,192 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-112" value="在mtr结束时把在mtr执行过程中可能修改过的页面加入到Buffer Pool的flush链表&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-112" value="在mtr结束时把在mtr执行过程中可能修改过的页面加入到Buffer Pool的flush链表&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-16" y="514" width="458" height="76" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-114" value="flush链表中的脏页是按照页面的第一次修改时间从大到小进行排序的（首次修改时会把页面对应控制块插入到头部，即oldest_modification代表的LSN值）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-114" value="flush链表中的脏页是按照页面的第一次修改时间从大到小进行排序的（首次修改时会把页面对应控制块插入到头部，即oldest_modification代表的LSN值）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="612.13" y="-605" width="427.87" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-117" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;oldest_modification：&lt;/span&gt;&lt;/div&gt;页面被加载到Buffer Pool后进行首次修改，mtr开始时对应的LSN值&lt;br&gt;&lt;br&gt;newest_modification：&lt;br&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;每修改以此页面时，mtr结束时对应的LSN值&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-117" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;oldest_modification：&lt;/span&gt;&lt;/div&gt;页面被加载到Buffer Pool后进行首次修改，mtr开始时对应的LSN值&lt;br&gt;&lt;br&gt;newest_modification：&lt;br&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;每修改以此页面时，mtr结束时对应的LSN值&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="650" y="-490" width="277.5" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-118" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页a&lt;br&gt;o_m:8716&lt;br&gt;n_m:8916&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-118" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页a&lt;br&gt;o_m:8716&lt;br&gt;n_m:8916&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="890" y="-285" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-119" value="eg：系统启动后向log buffer写入了mtr_1产生的redo日志，对应开始/结束LSN是 8716~8916&lt;br&gt;mtr_1所修改的页a对应控制块（首次）放入flush表头部，设置o_m和n_m" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-119" value="eg：系统启动后向log buffer写入了mtr_1产生的redo日志，对应开始/结束LSN是 8716~8916&lt;br&gt;mtr_1所修改的页a对应控制块（首次）放入flush表头部，设置o_m和n_m" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="884.94" y="-360" width="342.12" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-121" value="eg：mtr_2产生的redo日志，对应开始/结束LSN是 8916~9948&lt;br&gt;mtr_2所修改的页b/c对应控制块（首次）放入flush表头部，设置o_m和n_m" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-121" value="eg：mtr_2产生的redo日志，对应开始/结束LSN是 8916~9948&lt;br&gt;mtr_2所修改的页b/c对应控制块（首次）放入flush表头部，设置o_m和n_m" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="884.94" y="-210" width="342.12" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-122" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页a&lt;br&gt;o_m:8716&lt;br&gt;n_m:8916&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-122" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页a&lt;br&gt;o_m:8716&lt;br&gt;n_m:8916&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="1190" y="-117.5" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-123" target="uH2WkrMNkw98TE_kD1RD-124">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-123" target="uH2WkrMNkw98TE_kD1RD-124" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-123" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页b&lt;br&gt;o_m:8916&lt;br&gt;n_m:9948&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-123" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页b&lt;br&gt;o_m:8916&lt;br&gt;n_m:9948&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="890" y="-117.5" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-124" target="uH2WkrMNkw98TE_kD1RD-122">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-124" target="uH2WkrMNkw98TE_kD1RD-122" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-124" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页c&lt;br&gt;o_m:8916&lt;br&gt;n_m:9948&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-124" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页c&lt;br&gt;o_m:8916&lt;br&gt;n_m:9948&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="1040" y="-117.5" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-127" value="eg：mtr_3产生的redo日志，对应开始/结束LSN是 9948~10000&lt;br&gt;mtr_2所修改的页b/d对应控制块进行处理，设置o_m和n_m" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-127" value="eg：mtr_3产生的redo日志，对应开始/结束LSN是 9948~10000&lt;br&gt;mtr_2所修改的页b/d对应控制块进行处理，设置o_m和n_m" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="884.94" y="-40" width="342.12" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-128" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页a&lt;br&gt;o_m:8716&lt;br&gt;n_m:8916&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-128" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页a&lt;br&gt;o_m:8716&lt;br&gt;n_m:8916&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="1340" y="30" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-130" target="uH2WkrMNkw98TE_kD1RD-132">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-130" target="uH2WkrMNkw98TE_kD1RD-132" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-130" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页b&lt;br&gt;o_m:8916&lt;br&gt;n_m:10000&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-130" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页b&lt;br&gt;o_m:8916&lt;br&gt;n_m:10000&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="1040" y="30" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-132" target="uH2WkrMNkw98TE_kD1RD-128">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-132" target="uH2WkrMNkw98TE_kD1RD-128" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-132" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页c&lt;br&gt;o_m:8916&lt;br&gt;n_m:9948&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-132" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页c&lt;br&gt;o_m:8916&lt;br&gt;n_m:9948&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="1190" y="30" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uH2WkrMNkw98TE_kD1RD-133" target="uH2WkrMNkw98TE_kD1RD-130">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uH2WkrMNkw98TE_kD1RD-133" target="uH2WkrMNkw98TE_kD1RD-130" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-133" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页d&lt;br&gt;o_m:9948&lt;br&gt;n_m:10000&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-133" value="&lt;b style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;页d&lt;br&gt;o_m:9948&lt;br&gt;n_m:10000&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;align=left;" parent="1" vertex="1">
           <mxGeometry x="890" y="30" width="76" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-135" value="checkpoint&lt;br&gt;1.计算当前系统中可被覆盖的redo日志对应的lsn最大值=&amp;gt;checkpoint_lsn（凡是在系统lsn值小于flush表尾节点的oldest_modification值时产生的redo日志都是可以被覆盖掉）&lt;br&gt;2.将checkpoint_lsn和对应的redo日志文件组偏移量以及此次checkpint的编号写到日志文件的管理信息(checkpoint1 or checkpoint2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-135" value="checkpoint&lt;br&gt;1.计算当前系统中可被覆盖的redo日志对应的lsn最大值=&amp;gt;checkpoint_lsn（凡是在系统lsn值小于flush表尾节点的oldest_modification值时产生的redo日志都是可以被覆盖掉）&lt;br&gt;2.将checkpoint_lsn和对应的redo日志文件组偏移量以及此次checkpint的编号写到日志文件的管理信息(checkpoint1 or checkpoint2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-837" y="1260" width="637" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-136" value="&lt;b&gt;前2048字节（for 管理）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-136" value="&lt;b&gt;前2048字节（for 管理）&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="17" y="1244" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-137" value="&lt;b&gt;mtr_1&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-137" value="&lt;b&gt;mtr_1&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="202" y="1244" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-138" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;mtr_2&lt;/b&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-138" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;mtr_2&lt;/b&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="387" y="1244" width="185" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-139" value="&lt;b&gt;空闲&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-139" value="&lt;b&gt;空闲&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="572" y="1244" width="298" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-140" value="运行过程中的redo日志文件情况" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF0000;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-140" value="运行过程中的redo日志文件情况" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF0000;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-100" y="1214" width="175" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-146" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#999999;fontStyle=1;fontSize=13;" edge="1" parent="1" target="uH2WkrMNkw98TE_kD1RD-137">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-146" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#999999;fontStyle=1;fontSize=13;" parent="1" target="uH2WkrMNkw98TE_kD1RD-137" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="387" y="1130" as="sourcePoint" />
             <mxPoint x="280" y="1130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-149" value="checkpoint_lsn" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=13;" vertex="1" connectable="0" parent="uH2WkrMNkw98TE_kD1RD-146">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-149" value="checkpoint_lsn" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=13;" parent="uH2WkrMNkw98TE_kD1RD-146" vertex="1" connectable="0">
           <mxGeometry x="-0.4737" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-147" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#999999;fontStyle=1;fontSize=13;" edge="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-147" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#999999;fontStyle=1;fontSize=13;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="571" y="1130" as="sourcePoint" />
             <mxPoint x="571" y="1244" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-150" value="flushed_to_disk_lsn" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=13;" vertex="1" connectable="0" parent="uH2WkrMNkw98TE_kD1RD-147">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-150" value="flushed_to_disk_lsn" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=13;" parent="uH2WkrMNkw98TE_kD1RD-147" vertex="1" connectable="0">
           <mxGeometry x="-0.4386" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-148" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#999999;fontStyle=1;fontSize=13;" edge="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-148" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#999999;fontStyle=1;fontSize=13;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="671" y="1130" as="sourcePoint" />
             <mxPoint x="671" y="1244" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-151" value="lsn" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=13;" vertex="1" connectable="0" parent="uH2WkrMNkw98TE_kD1RD-148">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-151" value="lsn" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=13;" parent="uH2WkrMNkw98TE_kD1RD-148" vertex="1" connectable="0">
           <mxGeometry x="-0.5614" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-154" value="日志对应的脏页已经被刷新到磁盘里，该日志可被覆盖" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#0000CC;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-154" value="日志对应的脏页已经被刷新到磁盘里，该日志可被覆盖" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#0000CC;fontStyle=0" parent="1" vertex="1">
           <mxGeometry x="235" y="1297" width="130" height="68" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-155" value="redo日志已经刷新到磁盘里，但对应的脏页还未刷新到磁盘" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#0000CC;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-155" value="redo日志已经刷新到磁盘里，但对应的脏页还未刷新到磁盘" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#0000CC;fontStyle=0" parent="1" vertex="1">
           <mxGeometry x="410" y="1306" width="130" height="68" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-156" value="redo日志还未刷新到磁盘里" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#0000CC;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-156" value="redo日志还未刷新到磁盘里" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#0000CC;fontStyle=0" parent="1" vertex="1">
           <mxGeometry x="572" y="1306" width="130" height="68" as="geometry" />
         </mxCell>
-        <mxCell id="uH2WkrMNkw98TE_kD1RD-157" value="redo日志如何进行崩溃恢复：&lt;br&gt;1.确定恢复的起点&lt;br&gt;从checkpoint_lsn开始读取redo日志来恢复（根据checkpoint_no里最近的那次），即拿到里面的日志文件组的偏移量&lt;br&gt;2.确定恢复的终点&lt;br&gt;根据log blk header中的LOG_BLOCK_HDR_DATA_LEN：对于未填满的blk而言该值=512，故值!=512的blk就是最后一个&lt;br&gt;3.如何恢复&lt;br&gt;(1)哈希表&lt;br&gt;key=spaceId+pageNumber，val=同一页面的redo日志列表（按生成先后顺序连接）&lt;br&gt;避免随机IO，加快速度&lt;br&gt;(2)跳过已刷新到磁盘的页面&lt;br&gt;页-&amp;gt;File Header-&amp;gt;FIL_PAGE_LSN属性记录了最近一次修改页面时对应的LSN值(即n_m)，若其大于checkpoint_isn，则表示已经刷过（其他场景触发的）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" vertex="1" parent="1">
+        <mxCell id="uH2WkrMNkw98TE_kD1RD-157" value="redo日志如何进行崩溃恢复：&lt;br&gt;1.确定恢复的起点&lt;br&gt;从checkpoint_lsn开始读取redo日志来恢复（根据checkpoint_no里最近的那次），即拿到里面的日志文件组的偏移量&lt;br&gt;2.确定恢复的终点&lt;br&gt;根据log blk header中的LOG_BLOCK_HDR_DATA_LEN：对于未填满的blk而言该值=512，故值!=512的blk就是最后一个&lt;br&gt;3.如何恢复&lt;br&gt;(1)哈希表&lt;br&gt;key=spaceId+pageNumber，val=同一页面的redo日志列表（按生成先后顺序连接）&lt;br&gt;避免随机IO，加快速度&lt;br&gt;(2)跳过已刷新到磁盘的页面&lt;br&gt;页-&amp;gt;File Header-&amp;gt;FIL_PAGE_LSN属性记录了最近一次修改页面时对应的LSN值(即n_m)，若其大于checkpoint_isn，则表示已经刷过（其他场景触发的）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontColor=#000099;" parent="1" vertex="1">
           <mxGeometry x="-795" y="1580" width="617" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-1" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="-2230" as="sourcePoint" />
+            <mxPoint x="300" y="-2470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-2" value="锁" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;fontStyle=1;fontColor=#C3ABD0;" vertex="1" parent="1">
+          <mxGeometry x="572" y="-2649" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-3" value="锁所在的事务信息&lt;br&gt;（指针，可找到内存中关于该事务的更多信息）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-31" y="-2905" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-4" value="索引信息&lt;br&gt;（指针，加锁的记录是属于哪个索引）" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="-31" y="-2865" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;dashed=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZBTwbLHJ0m7Lz0K025Yf-5" target="ZBTwbLHJ0m7Lz0K025Yf-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="-2990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="ZBTwbLHJ0m7Lz0K025Yf-5" target="ZBTwbLHJ0m7Lz0K025Yf-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="ZBTwbLHJ0m7Lz0K025Yf-5" target="ZBTwbLHJ0m7Lz0K025Yf-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-5" value="行锁/表锁信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-31" y="-2825" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-6" value="锁结构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="45.75" y="-2935" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-7" value="其他信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-31" y="-2745" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="ZBTwbLHJ0m7Lz0K025Yf-8" target="ZBTwbLHJ0m7Lz0K025Yf-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="-2830" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-8" value="type_mode&lt;br&gt;lock_mode/lock_type/rec_lock_type" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-31" y="-2785" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-9" value="bits" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-31" y="-2705" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-10" value="表信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="486" y="-2945" width="208" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-11" value="spaceId&lt;br&gt;记录所在表空间" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="484" y="-2790" width="208" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-12" value="其他信息" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="486" y="-2905" width="208" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-13" value="page Number&lt;br&gt;记录所在页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="484" y="-2750" width="208" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-14" value="n_bit" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="484" y="-2710" width="208" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-15" value="表锁特有结构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="523" y="-2975" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-16" value="行锁特有结构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="523" y="-2820" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
