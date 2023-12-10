@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-08T12:27:45.170Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="qI4FwwGF_BRKn_n7sFT4" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-10T08:57:17.793Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="rW4N9fg6wIW4991Das26" version="22.1.7" type="github">
   <diagram name="Page-1" id="cN2y8amVZcgjIGidKNzW">
     <mxGraphModel dx="2750" dy="5025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -2288,7 +2288,7 @@
             <mxPoint x="250" y="-2830" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-8" value="type_mode&lt;br&gt;lock_mode/lock_type/rec_lock_type" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-8" value="type_mode&lt;br&gt;lock_mode/lock_type(4b)/rec_lock_type(4b)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-31" y="-2785" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-9" value="bits" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
@@ -2306,7 +2306,7 @@
         <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-13" value="page Number&lt;br&gt;记录所在页号" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="484" y="-2750" width="208" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-14" value="n_bit" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-14" value="n_bit&lt;br&gt;锁了多少比特位(一个记录一个bit位)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="484" y="-2710" width="208" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZBTwbLHJ0m7Lz0K025Yf-15" value="表锁特有结构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#FF0000;" vertex="1" parent="1">
